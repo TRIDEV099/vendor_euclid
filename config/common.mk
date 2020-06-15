@@ -153,6 +153,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.ime.kb_pad_land_l=64 \
     ro.com.google.ime.kb_pad_land_r=64
 
+# Lineage-specific file
+PRODUCT_COPY_FILES += \
+    vendor/euclid/config/permissions/privapp-permissions-lineagehw.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-lineagehw.xml
+
 # Skip boot JAR checks.
 SKIP_BOOT_JARS_CHECK := true
 
