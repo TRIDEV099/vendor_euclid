@@ -36,11 +36,9 @@ endif
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.strictmode.disable=true
 endif
 
-# Allow OTA downgrades on non-user builds
-ifneq ($(TARGET_BUILD_VARIANT),user)
+# Allow OTA downgrades
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.ota.allow_downgrade=true
-endif
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
