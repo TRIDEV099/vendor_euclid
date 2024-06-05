@@ -189,6 +189,10 @@ PRODUCT_COPY_FILES += \
 # Skip boot JAR checks.
 SKIP_BOOT_JARS_CHECK := true
 
+# Default wifi country code
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.boot.wificountrycode?=00
+
 # These packages are excluded from user builds
 PRODUCT_PACKAGES_DEBUG += \
     procmem
