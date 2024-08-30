@@ -105,6 +105,15 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/%/libfuse-lite.so \
     system/%/libntfs-3g.so
 
+# DeviceAsWebcam
+ifeq ($(TARGET_BUILD_DEVICE_AS_WEBCAM), true)
+    PRODUCT_PACKAGES += \
+        DeviceAsWebcam
+
+    PRODUCT_VENDOR_PROPERTIES += \
+        ro.usb.uvc.enabled=true
+endif
+
 # Disable RescueParty due to high risk of data loss
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.disable_rescue=true
