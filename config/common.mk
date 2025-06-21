@@ -133,6 +133,12 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/%/libfuse-lite.so \
     system/%/libntfs-3g.so
 
+# APEX
+DISABLE_DEXPREOPT_CHECK := true
+
+PRODUCT_PACKAGES += \
+    com.google.android.permission
+    
 # DeviceAsWebcam
 ifeq ($(TARGET_BUILD_DEVICE_AS_WEBCAM), true)
     PRODUCT_PACKAGES += \
